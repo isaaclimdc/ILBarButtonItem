@@ -17,7 +17,8 @@ __Selected button:__
 How to use
 ----------
 1. Copy `ILBarButtonItem.h` and `ILBarButtonItem.m` into your Xcode project. Be sure to check "Copy items into destination's group folder".
-2. In `viewDidLoad:` method of the view controller in which you want to display the bar button item, put in the following code. Note: your images should have dimensions below 44x44px for the best results.
+2. `#include "ILBarButtonItem.h"` in the view controller in which you want to display the bar button item.
+3. In its `viewDidLoad:` method, put in the following code. Note: your images should have dimensions below 44x44px for the best results.
 
         /* Left bar button item */
         self.navigationItem.leftBarButtonItem =
@@ -26,14 +27,14 @@ How to use
                                        target:<target here (e.g. self)>
                                        action:@selector(<tapped method call here>
 
-3. At runtime, you can change the images on the button by directly editing the `customImage` and `customSelectedImage` properties of an instance of an `ILBarButtonItem`.
+4. At runtime, you can change the images on the button by directly editing the `customImage` and `customSelectedImage` properties of an instance of an `ILBarButtonItem`.
 
         /* Highlight search button */
         ILBarButtonItem *rightBtn = (ILBarButtonItem *)self.navigationItem.rightBarButtonItem;
         rightBtn.customImage = [UIImage imageNamed:@"<default image to change to>.png"];
         rightBtn.customSelectedImage = [UIImage imageNamed:@"<selected image to change to>.png"];
 
-4. The tapped action can also be changed in a similar fashion by editing the `customAction` property.
+5. The tapped action can also be changed in a similar fashion by editing the `customAction` property.
 
 Requirements
 ------------
