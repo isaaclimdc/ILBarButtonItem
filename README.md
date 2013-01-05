@@ -40,7 +40,7 @@ Isaac Lim
 
 Version History
 ---------------
-### 1.0
+__1.0__
 - First publish to Github
 
 License
