@@ -19,7 +19,7 @@
 
     self.title = @"Demo App";
 
-    //Left bar button item
+    /* Left bar button item */
     ILBarButtonItem *settingsBtn =
         [ILBarButtonItem barItemWithImage:[UIImage imageNamed:@"gear.png"]
                             selectedImage:[UIImage imageNamed:@"gearSelected.png"]
@@ -28,7 +28,7 @@
     
     self.navigationItem.leftBarButtonItem = settingsBtn;
 
-    //Right bar button item
+    /* Right bar button item */
     ILBarButtonItem *searchBtn =
         [ILBarButtonItem barItemWithImage:[UIImage imageNamed:@"search.png"]
                             selectedImage:[UIImage imageNamed:@"searchSelected.png"]

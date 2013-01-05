@@ -1,16 +1,17 @@
 ILBarButtonItem
 ===============
-
+### Version 1.0
 Custom image for a UIBarButtonItem without the default bordered style.
 
 Overview
 --------
-Used instead of UIBarButtonItem when you don't want the default bordered style that Apple applies to it. Creates a *cleaner*-looking bar button item, or simply leaves more room for creative freedom!
+Used instead of UIBarButtonItem when you don't want the default bordered style that Apple applies to it. Creates a *cleaner*-looking bar button item, or simply leaves more room for creative freedom! See the included demo project for usage.
 
-<center>
+__Default button:__
 ![Default appearance](http://isaacl.net/images/libraries/ILBarButtonItem1.png)
+
+__Selected button:__
 ![Selected appearance](http://isaacl.net/images/libraries/ILBarButtonItem2.png)
-</center>
 
 How to use
 ----------
@@ -18,7 +19,7 @@ How to use
 2. In `viewDidLoad:` method of the view controller in which you want to display the bar button item, put in the following code. Note: your images should have dimensions below 44x44px for the best results.
 
 ```objective-c
-//Left bar button item
+/* Left bar button item */
 self.navigationItem.leftBarButtonItem =
     [ILBarButtonItem barItemWithImage:[UIImage imageNamed:@"<default image here>.png"]
                         selectedImage:[UIImage imageNamed:@"<selected image here>.png"]
