@@ -27,6 +27,16 @@ self.navigationItem.leftBarButtonItem =
                                target:<target here (e.g. self)>
                                action:@selector(<tapped method call here>
 ```
+3. At runtime, you can change the images on the button by directly editing the `customImage` and `customSelectedImage` properties of an instance of an `ILBarButtonItem`.
+
+```objective-c
+/* Highlight search button */
+ILBarButtonItem *rightBtn = (ILBarButtonItem *)self.navigationItem.rightBarButtonItem;
+rightBtn.customImage = [UIImage imageNamed:@"<default image to change to>.png"];
+rightBtn.customSelectedImage = [UIImage imageNamed:@"<selected image to change to>.png"];
+```
+
+4. The tapped action can also be changed in a similar fashion by editing the `customAction` property.
 
 Requirements
 ------------
