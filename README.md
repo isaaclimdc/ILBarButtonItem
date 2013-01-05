@@ -1,16 +1,17 @@
 ILBarButtonItem
 ===============
-### Version 1.0
 Custom image for a UIBarButtonItem without the default bordered style.
+
+### Version 1.0
 
 Overview
 --------
 Used instead of UIBarButtonItem when you don't want the default bordered style that Apple applies to it. Creates a *cleaner*-looking bar button item, or simply leaves more room for creative freedom! See the included demo project for usage.
 
-__Default button:__
+__Default button:__  
 ![Default appearance](http://isaacl.net/images/libraries/ILBarButtonItem1.png)
 
-__Selected button:__
+__Selected button:__  
 ![Selected appearance](http://isaacl.net/images/libraries/ILBarButtonItem2.png)
 
 How to use
@@ -36,6 +37,11 @@ Contact
 -------
 Isaac Lim  
 [@isaaclimdc](http://twitter.com/isaaclimdc)
+
+Version History
+---------------
+### 1.0
+- First publish to Github
 
 License
 -------
