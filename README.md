@@ -16,6 +16,7 @@ How to use
 ----------
 1. Copy `ILBarButtonItem.h` and `ILBarButtonItem.m` into your Xcode project. Be sure to check "Copy items into destination's group folder".
 2. In `viewDidLoad:` method of the view controller in which you want to display the bar button item, put in the following code. Note: your images should have dimensions below 44x44px for the best results.
+
 ```objective-c
 //Left bar button item
 self.navigationItem.leftBarButtonItem =
