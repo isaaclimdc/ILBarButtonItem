@@ -17,8 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = @"Demo App";
-
     /* Left bar button item */
     ILBarButtonItem *settingsBtn =
         [ILBarButtonItem barItemWithImage:[UIImage imageNamed:@"gear.png"]

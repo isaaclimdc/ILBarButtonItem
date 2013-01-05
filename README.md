@@ -6,7 +6,7 @@ Custom image for a UIBarButtonItem without the default bordered style.
 
 Overview
 --------
-Used instead of UIBarButtonItem when you don't want the default bordered style that Apple applies to it. Creates a *cleaner*-looking bar button item, or simply leaves more room for creative freedom! See the included demo project for usage.
+Used instead of UIBarButtonItem when you don't want the default bordered style that Apple applies to it. Creates a *cleaner*-looking bar button item, or simply leaves more room for creative freedom!
 
 __Default button:__  
 ![Default appearance](http://isaacl.net/images/libraries/ILBarButtonItem1.png)
@@ -16,11 +16,14 @@ __Selected button:__
 
 How to use
 ----------
-1. Copy `ILBarButtonItem.h` and `ILBarButtonItem.m` into your Xcode project. Be sure to check "Copy items into destination's group folder".
-2. `#include "ILBarButtonItem.h"` in the view controller in which you want to display the bar button item.
-3. In its `viewDidLoad:` method, put in the following code. Note: your images should have dimensions below 44x44px for the best results.
+A demo project `ILBarButtonItemDemo` is included to show how `ILBarButtonItem` can be integrated into a project.
 
-        /* Left bar button item */
+1. Copy the following 3 files into your Xcode project. Be sure to check "Copy items into destination's group folder".
+    - `ILBarButtonItem.h`
+    - `ILBarButtonItem.m`
+2. Add the line `#include "ILBarButtonItem.h"` to the `YourAppName-Prefix.pch` file in the "Supporting Files" group. This way, `ILBarButtonItem` will be available to every file in your project without needing to keep adding a `#include`.
+3. In the `viewDidLoad` method of the view controller you want the bar button item to show in, put in the following code. Note: your images should have dimensions below 44x44px for the best results.
+
         self.navigationItem.leftBarButtonItem =
             [ILBarButtonItem barItemWithImage:[UIImage imageNamed:@"<default image here>.png"]
                                 selectedImage:[UIImage imageNamed:@"<selected image here>.png"]
@@ -29,7 +32,6 @@ How to use
 
 4. At runtime, you can change the images on the button by directly editing the `customImage` and `customSelectedImage` properties of an instance of an `ILBarButtonItem`.
 
-        /* Highlight search button */
         ILBarButtonItem *rightBtn = (ILBarButtonItem *)self.navigationItem.rightBarButtonItem;
         rightBtn.customImage = [UIImage imageNamed:@"<default image to change to>.png"];
         rightBtn.customSelectedImage = [UIImage imageNamed:@"<selected image to change to>.png"];
@@ -45,6 +47,10 @@ Contact
 -------
 Isaac Lim  
 [@isaaclimdc](http://twitter.com/isaaclimdc)
+
+Credits
+-------
+- [Glyphish Pro](http://www.glyphish.com) icons
 
 Version History
 ---------------
