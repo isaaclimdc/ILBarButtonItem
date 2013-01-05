@@ -9,10 +9,10 @@ Overview
 Used instead of UIBarButtonItem when you don't want the default bordered style that Apple applies to it. Creates a *cleaner*-looking bar button item, or simply leaves more room for creative freedom!
 
 __Default button:__  
-![Default appearance](http://isaacl.net/images/libraries/ILBarButtonItem1.png)
+![Default appearance](http://isaacl.net/images/libraries/ILBarButtonItem/1.png)
 
 __Selected button:__  
-![Selected appearance](http://isaacl.net/images/libraries/ILBarButtonItem2.png)
+![Selected appearance](http://isaacl.net/images/libraries/ILBarButtonItem/2.png)
 
 How to use
 ----------
