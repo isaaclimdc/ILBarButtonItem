@@ -46,7 +46,7 @@ Requirements
 Contact
 -------
 Isaac Lim  
-[@isaaclimdc](http://twitter.com/isaaclimdc)
+[isaacl.net](http://isaacl.net)
 
 Credits
 -------
