@@ -1,18 +1,21 @@
 ILBarButtonItem
 ===============
-Custom image for a UIBarButtonItem without the default bordered style.
+Custom image or text for a UIBarButtonItem without the default bordered style.
 
-### Version 1.0
+### Version 1.1
 
 Overview
 --------
 Used instead of `UIBarButtonItem` when you don't want the default bordered style that Apple applies to it. Creates a *cleaner* bar button item, or simply leaves more room for creative freedom!
 
-**Default button:**  
+**Default buttons:**  
 ![Default appearance](http://isaacl.net/images/libraries/ILBarButtonItem/1.png)
 
-**Selected button:**  
+**Selected image button:**  
 ![Selected appearance](http://isaacl.net/images/libraries/ILBarButtonItem/2.png)
+
+**Selected text button:**  
+![Selected appearance](http://isaacl.net/images/libraries/ILBarButtonItem/3.png)
 
 How to use
 ----------
@@ -25,10 +28,16 @@ A demo project `ILBarButtonItemDemo` is included to show how `ILBarButtonItem` c
 3. In the `-viewDidLoad` method of the view controller you want the bar button item to show in, put in the following code. Note: your images should have dimensions below 44x44px for the best results.
 
         self.navigationItem.leftBarButtonItem =
-            [ILBarButtonItem barItemWithImage:[UIImage imageNamed:@"<default image here>.png"]
-                                selectedImage:[UIImage imageNamed:@"<selected image here>.png"]
-                                       target:<target here (e.g. self)>
-                                       action:@selector(<tapped method call here>
+            [ILBarButtonItem barItemWithImage:[UIImage imageNamed:@"gear.png"]
+                                selectedImage:[UIImage imageNamed:@"gearSelected.png"]
+                                       target:self
+                                       action:@selector(leftTapped:)];
+        
+        self.navigationItem.rightBarButtonItem =
+            [ILBarButtonItem barItemWithTitle:@"Start"
+                                   themeColor:[UIColor whiteColor]
+                                       target:self
+                                       action:@selector(rightTapped:)];
 
 4. At runtime, you can change the images on the button by directly editing the `customImage` and `customSelectedImage` properties of an instance of an `ILBarButtonItem`.
 
@@ -55,7 +64,10 @@ Credits
 Version History
 ---------------
 **1.0**
-- First publish to Github
+- First publish to Github  
+**1.1**
+- Added iOS 7 style text buttons
+
 
 License
 -------

@@ -18,22 +18,22 @@
     [super viewDidLoad];
 
     /* Left bar button item */
-    ILBarButtonItem *settingsBtn =
+    ILBarButtonItem *leftBtn =
         [ILBarButtonItem barItemWithImage:[UIImage imageNamed:@"gear.png"]
                             selectedImage:[UIImage imageNamed:@"gearSelected.png"]
                                    target:self
                                    action:@selector(leftTapped:)];
     
-    self.navigationItem.leftBarButtonItem = settingsBtn;
+    self.navigationItem.leftBarButtonItem = leftBtn;
 
     /* Right bar button item */
-    ILBarButtonItem *searchBtn =
-        [ILBarButtonItem barItemWithImage:[UIImage imageNamed:@"search.png"]
-                            selectedImage:[UIImage imageNamed:@"searchSelected.png"]
+    ILBarButtonItem *rightBtn =
+        [ILBarButtonItem barItemWithTitle:@"Start"
+                               themeColor:[UIColor whiteColor]
                                    target:self
                                    action:@selector(rightTapped:)];
     
-    self.navigationItem.rightBarButtonItem = searchBtn;
+    self.navigationItem.rightBarButtonItem = rightBtn;
 }
 
 - (IBAction)leftTapped:(id)sender {
@@ -46,7 +46,7 @@
 }
 
 - (IBAction)rightTapped:(id)sender {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Left button tapped"
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Right button tapped"
                                                     message:nil
                                                    delegate:self
                                           cancelButtonTitle:@"Great!"
