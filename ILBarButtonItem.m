@@ -7,10 +7,10 @@
 #import "ILBarButtonItem.h"
 
 @interface ILBarButtonItem() {
-    id customTarget;
+
     UIButton *customButton;
 }
-
+@property(nonatomic,assign)id customTarget;
 @end
 
 @implementation ILBarButtonItem
@@ -33,7 +33,7 @@
         customButton = btn;
         customImage = image;
         customSelectedImage = selectedImage;
-        customTarget = target;
+        _customTarget = target;
         customAction = action;
     }
 
@@ -93,7 +93,7 @@
         customButton = btn;
         customImage = nil;
         customSelectedImage = nil;
-        customTarget = target;
+        _customTarget = target;
         customAction = action;
     }
 
@@ -120,7 +120,7 @@
                         action:NULL
              forControlEvents:UIControlEventAllEvents];
     
-    [customButton addTarget:customTarget
+    [customButton addTarget:_customTarget
                      action:action
            forControlEvents:UIControlEventTouchUpInside];
 }
